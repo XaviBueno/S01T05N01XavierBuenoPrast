@@ -4,28 +4,22 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Date;
 
+public class ListDirEx02 {
 
-
-public class ListDir {
 	public static void main(String[] args) {
 		String string;
 		String dirName;
 		boolean param;
-		try {
-			//Agafa paràmetre linea comandes entrada el nom del directori
-			 string= args[0];
-			//Si no s'introdueix res llista el directori actual
-		}catch(ArrayIndexOutOfBoundsException e1){ 
-			//dirName=".";
+		
 			
-			string="proves /s";
+			dirName=args[0];
 			dirName=getNameDir(string);
 			param=getParam(string);
 			File directori=new File(dirName);
-			listDir(directori,param);
+		//	listDir(args);
 		}
 
-	}
+
 	
 	static String getNameDir(String cadena) {
 		String nameDir=cadena;
@@ -40,13 +34,38 @@ public class ListDir {
 		
 		return cadena.charAt(cadena.indexOf('/')+1)=='s';
 	}
+	/*
+	//FUNCIO NOVA
+	if (args.length ==0) args[0]=".";
+	else {
+		for (i=0; i<args.length;++i) {
+			switch(i) {
+				case 0:
+					if (args[0]=="/s") {
+						param=true;
+						File directori=new File(".");
+					}
+					else {
+						File directori=new File(args[0]);
+					}
+					break;
+				case 1:
+					if (args[0]=="/s") {
+						param=true;
+						
+					}
+			}
+		}*/
 	
-	static void listDir(File directori,boolean param) {
+	static void listDir(Arguments arguments) {
 		int i;
+		boolean param;
 		
+		
+		param= arguments.getListRecurs();
 		try {	
 			//instancia objecte file					
-			File[] dir=directori.listFiles(); 
+			File[] dir=arguments.getFile().listFiles(); 
 			if (dir!=null) { //Comproba que existeixi
 				Arrays.sort(dir); //ordena
 				for(i=0;i<dir.length;i++) {
@@ -57,7 +76,8 @@ public class ListDir {
 					else {
 						System.out.println(dir[i].getName()+"  "+date+"  D");
 						if (param) {
-							listDir(dir[i],param);
+							Arguments arg =new Arguments(dir[i],param);
+							listDir(arg);
 						}
 					}
 				}
@@ -73,5 +93,6 @@ public class ListDir {
 	}
 	
 	
-		
 }
+
+
