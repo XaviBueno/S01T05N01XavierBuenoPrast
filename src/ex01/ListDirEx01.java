@@ -13,11 +13,14 @@ public class ListDirEx01 {
 		File directori= new File(dirName);
 		listDir(directori);
 		}
-	
+	/*
+	 * LLISTA DIRECTORI 
+	 * directori a llistar
+	 */
 	static void listDir(File directori) {
 		
 		try {	
-			//instancia objecte file					
+						
 			File[] dir=directori.listFiles(); 
 			if (dir!=null) { //Comproba que existeixi
 				

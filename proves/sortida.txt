@@ -1,0 +1,12 @@
+1.txt  Thu Jun 16 17:41:51 CEST 2022   F
+2.txt  Thu Jun 16 17:42:01 CEST 2022   F
+3.txt  Thu Jun 16 17:42:10 CEST 2022   F
+4  Thu Jun 16 19:37:04 CEST 2022  	D
+1.txt  Thu Jun 16 17:41:51 CEST 2022   F
+2.txt  Thu Jun 16 17:42:01 CEST 2022   F
+3.txt  Thu Jun 16 17:42:10 CEST 2022   F
+5  Thu Jun 16 19:37:13 CEST 2022  	D
+1.txt  Thu Jun 16 17:41:51 CEST 2022   F
+2.txt  Thu Jun 16 17:42:01 CEST 2022   F
+3.txt  Thu Jun 16 17:42:10 CEST 2022   F
+listdir.jar  Tue Jun 21 14:10:41 CEST 2022   F
